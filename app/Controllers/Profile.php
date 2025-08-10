@@ -52,7 +52,7 @@ class Profile extends BaseController
 		]);
 		if ($validation) {
                 $upload = $this->request->getFile('file_upload');
-                $upload->move(WRITEPATH .'../assets/img/');
+                $upload->move(WRITEPATH .'../public/assets/img/');
             $data =[
                 'CompanyName'         => $this->request->getPost('CompanyName'),
                 'CompanyMail'          => $this->request->getPost('CompanyMail'),

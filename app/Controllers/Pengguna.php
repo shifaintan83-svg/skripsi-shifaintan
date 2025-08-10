@@ -191,9 +191,9 @@ class Pengguna extends BaseController
             // if ($validation) {
                 $upload = $this->request->getFile('file_upload');
                 $photoProfile = "profile".str_replace(" ","",$this->request->getPost('nama_pengguna'));
-                $file_delete =  WRITEPATH. '../assets/img/profile/'. $photoProfile;
+                $file_delete =  WRITEPATH. '../public/assets/img/profile/'. $photoProfile;
                 if (file_exists($file_delete)) {unlink($file_delete);} 
-                $upload->move(WRITEPATH .'../assets/img/profile/',$photoProfile );
+                $upload->move(WRITEPATH .'../public/assets/img/profile/',$photoProfile );
                 
                 $photoProfileArray =[
                     'foto_profil'       => $photoProfile
